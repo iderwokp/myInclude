@@ -9,11 +9,7 @@ struct Point {
     int X{0};
     int Y{0};
 };
-//struct Rect {
-//    Point P;
-//    int Width{0};
-//    int Height{0};
-//};
+
 class Widget {
 	// Private section
 	Point _startpoint{};
@@ -23,7 +19,7 @@ class Widget {
 	int _deltaY{0};
 	int _angle{0};
 	bool _rotating{false};
-	//Rect _rect;
+	
 	std::string filename{};
 	SDL_Renderer* renderer;
 	SDL_Surface* surface;
@@ -105,7 +101,7 @@ class Widget {
             SDL_RenderCopyEx(renderer, texture, NULL, &_rect,_angle,nullptr,SDL_FLIP_NONE);	        
 	    }
 		~Widget() {
-		    std::cout << "~Widget()\n";
+		    //std::cout << "~Widget()\n";
 		    destroy();
 		}
 		int& angle()  {
